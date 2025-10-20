@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sociea</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+   <header>
+    <div class="header-container">
+        <div class="logo">
+            <a href="#">Sociea</a>
+        </div>
+        <nav>
+            <ul class="nav-menu">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+
+                <li class="dropdown">
+                    <a href="#">We Offers ▼</a>
+                    <ul class="dropdown-menu">
+                        <li class="sub-dropdown">
+                            <a href="#">Services ▶</a>
+                            <ul class="sub-dropdown-menu">
+                                <li><a href="#">Content Marketing</a></li>
+                                <li><a href="#">E-commerce Solutions</a></li>
+                                <li><a href="#">Pay Per Click</a></li>
+                                <li><a href="#">Search Engine Optimization</a></li>
+                                <li><a href="#">Social Media Marketing</a></li>
+                                <li><a href="#">Website Design and Development</a></li>
+                            </ul>
+                        </li>
+                        <li class="sub-dropdown">
+                            <a href="#">Our Products ▶</a>
+                            <ul class="sub-dropdown-menu">
+                                <li><a href="#">Product A</a></li>
+                                <li><a href="#">Product B</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+
+                <li class="dropdown">
+                        <a href="#">Pricing ▼</a>
+                            <ul class="dropdown-menu">
+                                <li><a href="#">SMM Package</a></li>
+                                <li><a href="#">SEO Package</a></li>
+                                <li><a href="#">Development Package</a></li>
+                            </ul>
+                </li>
+
+        
+                <!-- <li><a href="#">Careers</a></li> -->
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+    </div>    
+</header>
+
+
+<main>
+        <p>All contents here</p>
+        #F5EFE6
+        #E8DFCA
+        #6D94C5
+        #CBDCEB
+
+
+        <!-- WhatsApp Form Popup -->
+        <div id="whatsapp-form-container">
+        <div id="whatsapp-form-header">
+            Contact via WhatsApp
+            <span id="close-form" style="cursor:pointer;">&#x25BC;</span>
+        </div>
+        <div id="whatsapp-form-body">
+            <input type="text" id="name" class="whatsapp-input" placeholder="Enter your Name" />
+            <input type="email" id="email" class="whatsapp-input" placeholder="Enter your Email" />
+            <input type="text" id="phone" class="whatsapp-input" placeholder="Enter your Phone" />
+            <textarea id="message" class="whatsapp-input" placeholder="Enter your Message"></textarea>
+            <button class="whatsapp-send-button" id="sendWhatsApp">
+            <img src="https://img.icons8.com/ios-filled/50/ffffff/whatsapp.png" class="icon" alt="WhatsApp" />
+            Send on WhatsApp
+            </button>
+        </div>
+        </div>
+
+        <!-- Floating Button -->
+        <div id="whatsapp-button">
+        <img src="https://img.icons8.com/ios-filled/50/ffffff/whatsapp.png" alt="WhatsApp" />
+        </div>
+
+
+
+
+</main>
+
+<footer>
+  <div class="footer-container">
+    <div class="footer-left">
+      <img src="logo.png" alt="DRAFTICODE">
+      <p>Our technologies are designed to seamlessly integrate with your existing systems, minimizing disruption and maximizing productivity.</p>
+      <div class="social-icons">
+        <a href="#" class="social-icon">Facebook</a>
+        <a href="#" class="social-icon">X</a>
+        <a href="#" class="social-icon">LinkedIn</a>
+      </div>
+    </div>
+    <div class="footer-middle">
+      <h3>Useful Links</h3>
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Services</a></li>
+        <li><a href="#">Project</a></li>
+        <li><a href="#">Pricing</a></li>
+        <li><a href="#">Blogs</a></li>
+      </ul>
+    </div>
+    <div class="footer-middle">
+      <h3>Company</h3>
+      <ul>
+        <li><a href="#">Team</a></li>
+        <li><a href="#">Courses</a></li>
+        <li><a href="#">Jobs</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </div>
+    <div class="footer-right">
+      <h3>Main Office</h3>
+      <address>
+        Office 2, B-15, Arihant Plaza, Swash Lane, <br>
+        Saheed Nagar, Bhubaneswar, Odisha 751007 <br>
+        +91 79751 89067 <br>
+        <a href="mailto:office@drafticode.com">office@drafticode.com</a>
+      </address>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>Copyrights © 2025. All rights reserved by DRAFTICODE</p>
+  </div>
+</footer>
+
+
+
+
+
+
+<!-- JS -->
+<script>
+  const whatsappBtn = document.getElementById('whatsapp-button');
+  const formContainer = document.getElementById('whatsapp-form-container');
+  const closeForm = document.getElementById('close-form');
+  const sendBtn = document.getElementById('sendWhatsApp');
+
+  whatsappBtn.addEventListener('click', () => {
+    formContainer.style.display = 'block';
+  });
+
+  closeForm.addEventListener('click', () => {
+    formContainer.style.display = 'none';
+  });
+
+  sendBtn.addEventListener('click', () => {
+    const phoneNumber = "+916371130556"; // <-- Your number here (no + sign)
+    const name = document.getElementById('name').value.trim();
+    const email = document.getElementById('email').value.trim();
+    const phone = document.getElementById('phone').value.trim();
+    const message = document.getElementById('message').value.trim();
+
+    if (!message) {
+      alert("Please enter a message.");
+      return;
+    }
+
+    const finalMessage = `Hello, my name is ${name || 'Anonymous'}.\nEmail: ${email}\nPhone: ${phone}\nMessage: ${message}`;
+    const encodedMessage = encodeURIComponent(finalMessage);
+    const whatsappURL = `https://api.whatsapp.com/send?phone=${phoneNumber}&text=${encodedMessage}`;
+
+    window.open(whatsappURL, '_blank');
+  });
+</script>
+</body>
+</html>
+
