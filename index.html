@@ -3,195 +3,788 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sociea</title>
-    <link rel="stylesheet" href="style.css">
+    <meta name="description" content="Sociea - Modern digital marketing solutions with day/night mode">
+    <title>Sociea - Digital Marketing Solutions</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+
 </head>
 <body>
-   <header>
-    <div class="header-container">
-        <div class="logo">
-            <a href="#">Sociea</a>
+                                                                                                         <!-- Custom Cursor Glow -->
+    <div class="cursor-glow" id="cursorGlow"></div>
+    
+    <header id="header">
+        <div class="header-bg-effect">
+            <div class="bg-circle"></div>
+            <div class="bg-circle"></div>
+            <div class="bg-circle"></div>
         </div>
-        <nav>
-            <ul class="nav-menu">
-                <li><a href="#">Home</a></li>
-                <li><a href="#">About</a></li>
+      
+        <div class="header-container">
+<!-- 
+            <div class="logo">
+                <span class="logo-placeholder" aria-hidden="true">🚀</span>
+                <a href="#" aria-label="Sociea Home">Sociea</a>
+            </div> -->
 
-                <li class="dropdown">
-                    <a href="#">We Offers ▼</a>
-                    <ul class="dropdown-menu">
-                        <li class="sub-dropdown">
-                            <a href="#">Services ▶</a>
-                            <ul class="sub-dropdown-menu">
-                                <li><a href="#">Content Marketing</a></li>
-                                <li><a href="#">E-commerce Solutions</a></li>
-                                <li><a href="#">Pay Per Click</a></li>
-                                <li><a href="#">Search Engine Optimization</a></li>
-                                <li><a href="#">Social Media Marketing</a></li>
-                                <li><a href="#">Website Design and Development</a></li>
-                            </ul>
-                        </li>
-                        <li class="sub-dropdown">
-                            <a href="#">Our Products ▶</a>
-                            <ul class="sub-dropdown-menu">
-                                <li><a href="#">Product A</a></li>
-                                <li><a href="#">Product B</a></li>
-                            </ul>
-                        </li>
-                    </ul>
-                </li>
-
-                <li class="dropdown">
-                        <a href="#">Pricing ▼</a>
-                            <ul class="dropdown-menu">
-                                <li><a href="#">SMM Package</a></li>
-                                <li><a href="#">SEO Package</a></li>
-                                <li><a href="#">Development Package</a></li>
-                            </ul>
-                </li>
-
-        
-                <!-- <li><a href="#">Careers</a></li> -->
-                <li><a href="#">Contact</a></li>
-            </ul>
-        </nav>
-    </div>    
-</header>
-
-
-<main>
-        <p>All contents here</p>
-        #F5EFE6
-        #E8DFCA
-        #6D94C5
-        #CBDCEB
-
-
-        <!-- WhatsApp Form Popup -->
-        <div id="whatsapp-form-container">
-        <div id="whatsapp-form-header">
-            Contact via WhatsApp
-            <span id="close-form" style="cursor:pointer;">&#x25BC;</span>
-        </div>
-        <div id="whatsapp-form-body">
-            <input type="text" id="name" class="whatsapp-input" placeholder="Enter your Name" />
-            <input type="email" id="email" class="whatsapp-input" placeholder="Enter your Email" />
-            <input type="text" id="phone" class="whatsapp-input" placeholder="Enter your Phone" />
-            <textarea id="message" class="whatsapp-input" placeholder="Enter your Message"></textarea>
-            <button class="whatsapp-send-button" id="sendWhatsApp">
-            <img src="https://img.icons8.com/ios-filled/50/ffffff/whatsapp.png" class="icon" alt="WhatsApp" />
-            Send on WhatsApp
+            <div class="logo">
+                <img src="logo.png" alt="Sociea Logo" class="logo-image">
+                <a href="#" aria-label="Sociea Home">Sociea</a>
+            </div>
+            
+            
+             <nav aria-label="Main navigation">
+                <ul class="nav-menu" id="navMenu">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    
+                    <li class="dropdown">
+                        <a href="#offers" aria-haspopup="true" aria-expanded="false">We Offers</a>
+                        <ul class="dropdown-menu" role="menu">
+                            <li class="sub-dropdown">
+                                <a href="#services" aria-haspopup="true" aria-expanded="false">Services</a>
+                                <ul class="sub-dropdown-menu" role="menu">
+                                    <li><a href="#content-marketing" role="menuitem">Content Marketing</a></li>
+                                    <li><a href="#ecommerce" role="menuitem">E-commerce Solutions</a></li>
+                                    <li><a href="#ppc" role="menuitem">Pay Per Click</a></li>
+                                    <li><a href="#seo" role="menuitem">Search Engine Optimization</a></li>
+                                    <li><a href="#smm" role="menuitem">Social Media Marketing</a></li>
+                                    <li><a href="#web-dev" role="menuitem">Website Design and Development</a></li>
+                                </ul>
+                            </li>
+                            <li class="sub-dropdown">
+                                <a href="#products" aria-haspopup="true" aria-expanded="false">Our Products</a>
+                                <ul class="sub-dropdown-menu" role="menu">
+                                    <li><a href="#product-a" role="menuitem">Product A</a></li>
+                                    <li><a href="#product-b" role="menuitem">Product B</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    
+                    <li class="dropdown">
+                        <a href="#pricing" aria-haspopup="true" aria-expanded="false">Pricing</a>
+                        <ul class="dropdown-menu" role="menu">
+                            <li><a href="#smm-package" role="menuitem">SMM Package</a></li>
+                            <li><a href="#seo-package" role="menuitem">SEO Package</a></li>
+                            <li><a href="#dev-package" role="menuitem">Development Package</a></li>
+                        </ul>
+                    </li>
+                    
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+            
+                                                                                                                               <!-- Day/Night Toggle -->
+            <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+                <span class="theme-toggle-icon" aria-hidden="true">☀️</span>
+            </button>
+            
+            <button class="mobile-menu-toggle" id="mobileMenuToggle" aria-label="Toggle mobile menu" aria-expanded="false">
+                <span></span>
+                <span></span>
+                <span></span>
             </button>
         </div>
+    </header>
+
+                                                                                                                                <!-- Hero Section -->
+    <section class="hero-section" id="home">
+        <div class="hero-content">
+        <h1 class="hero-title">Welcome to Sociea</h1>
+         <h4>Empowering Businesses Through Social Media At Sociea, we believe in the power of connection. We help startups, entrepreneurs, and established businesses harness the potential of social media to build brand awareness, drive leads, and foster meaningful engagement.</h4>
+           <br>
+           <div class="hero-buttons">
+                <a href="#contact" class="btn btn-primary">Get Started</a>
+                <a href="#about" class="btn btn-secondary">Learn More</a>
+            </div>
         </div>
-
-        <!-- Floating Button -->
-        <div id="whatsapp-button">
-        <img src="https://img.icons8.com/ios-filled/50/ffffff/whatsapp.png" alt="WhatsApp" />
+        <div class="hero-shapes">
+            <div class="shape-float shape-1"></div>
+            <div class="shape-float shape-2"></div>
+            <div class="shape-float shape-3"></div>
         </div>
+    </section>
+
+    <header></header>
+                                                                                                                    <!-- Main Content -->
+<main>
+        <section class="content-section" id="about">
+            <div class="container">
+                <h2 class="section-title">About Our Platform</h2>
+               <div class="content-grid">
+                    <div class="content-card">
+                        <div class="card-icon">🧠</div>
+                        <h3>Smart Social Strategy</h3>
+                        <p>We craft tailored social media plans that align with your business goals and target audience.</p>
+                    </div>
+                    <div class="content-card">
+                        <div class="card-icon">✍️</div>
+                        <h3>Content That Connects</h3>
+                        <p>Our team creates engaging, on-brand content that drives interaction and builds community.</p>
+                    </div>
+                    <div class="content-card">
+                        <div class="card-icon">⚙️</div>
+                        <h3>End-to-End Management</h3>
+                        <p>From posting to replying, we handle your social media so you can focus on running your business.</p>
+                    </div>
+                    <div class="content-card">
+                        <div class="card-icon">📊</div>
+                        <h3>Real Results, Clear Insights</h3>
+                        <p>Track growth and performance with transparent reporting and data-driven recommendations.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="features-section" id="services">
+            <div class="container">
+                <h2 class="section-title">Our Services</h2>
+                <p class="section-description">Comprehensive digital solutions tailored to your business needs</p>
+                <div class="features-grid">
+                    <div class="feature-item">
+                        <span class="feature-number">01</span>
+                        <h3>SEO Optimization</h3>
+                        <p>Boost your search rankings with data-driven strategies</p>
+                    </div>
+                    <div class="feature-item">
+                        <span class="feature-number">02</span>
+                        <h3>Social Media</h3>
+                        <p>Engage your audience across all platforms</p>
+                    </div>
+                    <!-- <div class="feature-item">
+                        <span class="feature-number">03</span>
+                        <h3>Web Development</h3>
+                        <p>Custom websites built with modern technologies</p>
+                    </div> -->
+                    <div class="feature-item">
+                        <span class="feature-number">03</span>
+                        <h3>Content Marketing</h3>
+                        <p>Compelling content that converts visitors to customers</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+                                                                                                            <!-- OUR CLIENT -->
+        <section class="features-section">
+            <div class="container">
+                 <h2 class="section-title">Our Clients</h2>
+            </div>
+        </section>
+
+    <section class="features-section" id="pricing">
+        <div class="container">
+            <h2 class="section-title">Pricing</h2>
+            <div class="pricing-container">
+            <!-- Basic Plan -->
+            <div class="pricing-card basic">
+                <div class="card-header">
+                    <h2 class="plan-name">Basic</h2>
+                    <div class="price">
+                        <span class="currency">₹</span>
+                        <span class="amount">18K</span>
+                        <span class="period">/mo</span>
+                    </div>
+                </div>
+                <div class="card-body">
+                    <ul class="features-list">
+                        <li class="feature included">
+                            <span class="icon">✓</span>
+                            <span class="text">2 Social Media Platforms</span>
+                        </li>
+                        <li class="feature included">
+                            <span class="icon">✓</span>
+                            <span class="text">9 creative Posters per Month</span>
+                        </li>
+                        <li class="feature included">
+                            <span class="icon">✓</span>
+                            <span class="text">6 creative reels per month</span>
+                        </li>
+                        <li class="feature included">
+                            <span class="icon">✓</span>
+                            <span class="text">Daily story updates</span>
+                        </li>
+                        <li class="feature included">
+                            <span class="icon">✓</span>
+                            <span class="text">Google My Business setup</span>
+                        </li>
+                        <li class="feature included">
+                            <span class="icon">✓</span>
+                            <span class="text">Monthly performance report</span>
+                        </li>
+                        <li class="feature included">
+                            <span class="icon">✓</span>
+                            <span class="text">Monthly profile reach (20k to 30k)</span>
+                        </li>
+                        <li class="feature included">
+                            <span class="icon">✓</span>
+                            <span class="text">2 device shoot includes(6 months package)</span>
+                        </li>
+                        <li class="feature included">
+                            <span class="icon">✓</span>
+                            <span class="text">1 Boost post every month</span>
+                        </li>
+                        <li class="feature included">
+                            <span class="icon">✓</span>
+                            <span class="text">chat support</span>
+                        </li>
+                        <li class="feature included">
+                            <span class="icon">✓</span>
+                            <span class="text">Paid influencer on request</span>
+                        </li>
+                        <li class="feature excluded">
+                            <span class="icon">✕</span>
+                            <span class="text">Basic engagement (likes, comments & shares)</span>
+                        </li>
+                        <li class="feature excluded">
+                            <span class="icon">✕</span>
+                            <span class="text">1 ad post campaign</span>
+                        </li>
+                        <li class="feature excluded">
+                            <span class="icon">✕</span>
+                            <span class="text">Monthly brand growth strategy plans tailored to your goals</span>
+                        </li>
+                        <li class="feature excluded">
+                            <span class="icon">✕</span>
+                            <span class="text">Lead generation (10-20 qualified leads per month)</span>
+                        </li>
+                        <li class="feature excluded">
+                            <span class="icon">✕</span>
+                            <span class="text">1 professional DSLR shoot</span>
+                        </li>
+                        <li class="feature excluded">
+                            <span class="icon">✕</span>
+                            <span class="text">Story Updates & Interactive Polls</span>
+                        </li>
+                    </ul>
+                    <button class="cta-button">Get Started Now</button>
+                </div>
+            </div>
+
+            <!-- Most Popular Plan -->
+            <div class="pricing-card popular">
+                <div class="card-header">
+                    <h2 class="plan-name">Most Popular</h2>
+                    <div class="price">
+                        <span class="currency">₹</span>
+                        <span class="amount">25K</span>
+                        <span class="period">/mo</span>
+                    </div>
+                </div>
+                <div class="card-body">
+                    <ul class="features-list">
+                        <li class="feature included">
+                            <span class="icon">✓</span>
+                            <span class="text">3 social media platforms</span>
+                        </li>
+                        <li class="feature included">
+                            <span class="icon">✓</span>
+                            <span class="text">9 custom-designed posters per month</span>
+                        </li>
+                        <li class="feature included">
+                            <span class="icon">✓</span>
+                            <span class="text">9 engaging reels per month</span>
+                        </li>
+                        <li class="feature included">
+                            <span class="icon">✓</span>
+                            <span class="text">Daily stories to keep your audience connected</span>
+                        </li>
+                        <li class="feature included">
+                            <span class="icon">✓</span>
+                            <span class="text">Google My Business setup & management</span>
+                        </li>
+                        <li class="feature included">
+                            <span class="icon">✓</span>
+                            <span class="text">Monthly performance report with insights & suggestions</span>
+                        </li>
+                        <li class="feature included">
+                            <span class="icon">✓</span>
+                            <span class="text">Monthly profile reach (30k to 50k)</span>
+                        </li>
+                        <li class="feature included">
+                            <span class="icon">✓</span>
+                            <span class="text">1 DSLR shoot per month</span>
+                        </li>
+                        <li class="feature included">
+                            <span class="icon">✓</span>
+                            <span class="text">Email support for quick assistance</span>
+                        </li>
+                        <li class="feature included">
+                            <span class="icon">✓</span>
+                            <span class="text">Basic engagement (likes, comments & shares)</span>
+                        </li>
+                        <li class="feature included">
+                            <span class="icon">✓</span>
+                            <span class="text">1 post boost, 1 ad post campaign</span>
+                        </li>
+                        <li class="feature included">
+                            <span class="icon">✓</span>
+                            <span class="text">Chat support</span>
+                        </li>
+                        <li class="feature included">
+                            <span class="icon">✓</span>
+                            <span class="text">1 influencer includes (6 month purchase)</span>
+                        </li>
+                        <li class="feature excluded">
+                            <span class="icon">✕</span>
+                            <span class="text">Story Updates & Interactive Polls</span>
+                        </li>
+                        <li class="feature excluded">
+                            <span class="icon">✕</span>
+                            <span class="text">Monthly brand growth strategy plans tailored to your goals</span>
+                        </li>
+                        <li class="feature excluded">
+                            <span class="icon">✕</span>
+                            <span class="text">Lead generation (10-20 qualified leads per month)</span>
+                        </li>
+                    </ul>
+                    <button class="cta-button">Get Started Now</button>
+                </div>
+            </div>
+
+            <!-- Premium Plan -->
+            <div class="pricing-card premium">
+                <div class="card-header">
+                    <h2 class="plan-name">Premium</h2>
+                    <div class="price">
+                        <span class="currency">₹</span>
+                        <span class="amount">40K</span>
+                        <span class="period">/mo</span>
+                    </div>
+                </div>
+                <div class="card-body">
+                    <ul class="features-list">
+                        <li class="feature included">
+                            <span class="icon">✓</span>
+                            <span class="text">4 Social Media Platforms</span>
+                        </li>
+                        <li class="feature included">
+                            <span class="icon">✓</span>
+                            <span class="text">11 high-quality posters per month</span>
+                        </li>
+                        <li class="feature included">
+                            <span class="icon">✓</span>
+                            <span class="text">14 creative & engaging reels per month</span>
+                        </li>
+                        <li class="feature included">
+                            <span class="icon">✓</span>
+                            <span class="text">Daily story to keep your audience engaged & connected</span>
+                        </li>
+                        <li class="feature included">
+                            <span class="icon">✓</span>
+                            <span class="text">Google My Business setup & management</span>
+                        </li>
+                        <li class="feature included">
+                            <span class="icon">✓</span>
+                            <span class="text">Monthly performance report with actionable insights</span>
+                        </li>
+                        <li class="feature included">
+                            <span class="icon">✓</span>
+                            <span class="text">Monthly profile reach (50k to 1M )</span>
+                        </li>
+                        <li class="feature included">
+                            <span class="icon">✓</span>
+                            <span class="text">1 DSLR & Device shoot with drone coverage (monthly)</span>
+                        </li>
+                        <li class="feature included">
+                            <span class="icon">✓</span>
+                            <span class="text">Email support for quick assistance</span>
+                        </li>
+                        <li class="feature included">
+                            <span class="icon">✓</span>
+                            <span class="text">Basic engagement (likes, comments & shares)</span>
+                        </li>
+                        <li class="feature included">
+                            <span class="icon">✓</span>
+                            <span class="text">1 influencer collaboration per month</span>
+                        </li>
+                        <li class="feature included">
+                            <span class="icon">✓</span>
+                            <span class="text">1 ad post, 1 post boost, and 1 lead generation campaign every month</span>
+                        </li>
+                        <li class="feature included bonus">
+                            <span class="icon">✓</span>
+                            <span class="text"><strong>Bonus :-</strong> (Extra design support including leaflets, standees, hoardings, and other creative collaterals)</span>
+                        </li>
+                        <li class="feature included">
+                            <span class="icon">✓</span>
+                            <span class="text">Story Updates & Interactive Polls</span>
+                        </li>
+                        <li class="feature included">
+                            <span class="icon">✓</span>
+                            <span class="text">Monthly brand growth strategy plans tailored to your goals</span>
+                        </li>
+                        <li class="feature included">
+                            <span class="icon">✓</span>
+                            <span class="text">Lead generation (10–20 qualified leads per month)</span>
+                        </li>
+                    </ul>
+                    <button class="cta-button">Get Started Now</button>
+                </div>
+            </div>
+        </div>
+        </div> 
+    </section>       
+
+        
 
 
+
+                                                                                                            <!-- TEAM MEMBERS -->
+    <section class="features-section">
+        <div class="container">
+            <h2 class="section-title">Meet Our Team</h2>
+    <!-- Container with grid -->
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+
+      <!-- Card 1 -->
+      <a href="#" class="group relative block bg-black rounded-xl overflow-hidden">
+        <img
+          alt=""
+          src="https://images.unsplash.com/photo-1603871165848-0aa92c869fa1?auto=format&fit=crop&w=772&q=80"
+          class="absolute inset-0 h-full w-full object-cover opacity-75 transition-opacity group-hover:opacity-50"
+        />
+        <div class="relative p-4 sm:p-6 lg:p-8">
+          <p class="text-sm font-medium tracking-widest text-pink-500 uppercase">Developer</p>
+          <p class="text-xl font-bold text-white sm:text-2xl">Tony Wayne</p>
+          <div class="mt-32 sm:mt-48 lg:mt-64">
+            <div class="translate-y-8 transform opacity-0 transition-all group-hover:translate-y-0 group-hover:opacity-100">
+              <p class="text-sm text-white">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis perferendis hic asperiores quibusdam.
+              </p>
+            </div>
+          </div>
+        </div>
+      </a>
+
+                                                                                                     <!-- Duplicate for Card 2, 3, 4 -->
+      <a href="#" class="group relative block bg-black rounded-xl overflow-hidden">
+        <img
+          alt=""
+          src="https://images.unsplash.com/photo-1606813902734-43a8074df3c3?auto=format&fit=crop&w=772&q=80"
+          class="absolute inset-0 h-full w-full object-cover opacity-75 transition-opacity group-hover:opacity-50"
+        />
+        <div class="relative p-4 sm:p-6 lg:p-8">
+          <p class="text-sm font-medium tracking-widest text-pink-500 uppercase">Designer</p>
+          <p class="text-xl font-bold text-white sm:text-2xl">Sarah Miller</p>
+          <div class="mt-32 sm:mt-48 lg:mt-64">
+            <div class="translate-y-8 transform opacity-0 transition-all group-hover:translate-y-0 group-hover:opacity-100">
+              <p class="text-sm text-white">
+                Passionate UI/UX designer with strong focus on modern interfaces.
+              </p>
+            </div>
+          </div>
+        </div>
+      </a>
+
+      <a href="#" class="group relative block bg-black rounded-xl overflow-hidden">
+        <img
+          alt=""
+          src="https://images.unsplash.com/photo-1502685104226-ee32379fefbe?auto=format&fit=crop&w=772&q=80"
+          class="absolute inset-0 h-full w-full object-cover opacity-75 transition-opacity group-hover:opacity-50"
+        />
+        <div class="relative p-4 sm:p-6 lg:p-8">
+          <p class="text-sm font-medium tracking-widest text-pink-500 uppercase">Manager</p>
+          <p class="text-xl font-bold text-white sm:text-2xl">John Carter</p>
+          <div class="mt-32 sm:mt-48 lg:mt-64">
+            <div class="translate-y-8 transform opacity-0 transition-all group-hover:translate-y-0 group-hover:opacity-100">
+              <p class="text-sm text-white">Handles team coordination and strategic planning.</p>
+            </div>
+          </div>
+        </div>
+      </a>
+
+      <a href="#" class="group relative block bg-black rounded-xl overflow-hidden">
+        <img
+          alt=""
+          src="https://images.unsplash.com/photo-1511367461989-f85a21fda167?auto=format&fit=crop&w=772&q=80"
+          class="absolute inset-0 h-full w-full object-cover opacity-75 transition-opacity group-hover:opacity-50"
+        />
+        <div class="relative p-4 sm:p-6 lg:p-8">
+          <p class="text-sm font-medium tracking-widest text-pink-500 uppercase">Engineer</p>
+          <p class="text-xl font-bold text-white sm:text-2xl">Alice Brown</p>
+          <div class="mt-32 sm:mt-48 lg:mt-64">
+            <div class="translate-y-8 transform opacity-0 transition-all group-hover:translate-y-0 group-hover:opacity-100">
+              <p class="text-sm text-white">Specialist in embedded systems and IoT development.</p>
+            </div>
+          </div>
+        </div>
+      </a>
+    </div>
+        </section>
+
+                                                                                                        <!-- Contact Header Section -->
+    <section class="contact-header" id="contact">
+        <button class="close-btn" aria-label="Close">✕</button>
+        <div class="header-content">
+            <h1>Contact Us</h1>
+            <div class="envelope-icon">
+                <svg width="80" height="80" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                    <rect x="3" y="5" width="18" height="14" rx="2" ry="2"></rect>
+                    <polyline points="3 7 12 13 21 7"></polyline>
+                </svg>
+            </div>
+        </div>
+    </section>
+
+                                                                                                         <!-- Contact Info Section -->
+    <section class="contact-info">
+        <h2>Contact Info</h2>
+        <p class="subtitle">At Sociea, we're here to help! Whether you have questions, need support, or want to explore partnership opportunities, feel free to reach out to us.</p>
+        
+        <div class="info-grid">
+            <div class="info-card">
+                <div class="info-icon">
+                    <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <rect x="3" y="4" width="18" height="16" rx="2" ry="2"></rect>
+                        <polyline points="3 6 12 11 21 6"></polyline>
+                    </svg>
+                </div>
+                <h3>Office Email</h3>
+                <p>sociea.co@gmail.com</p>
+            </div>
+
+            <div class="info-card">
+                <div class="info-icon">
+                    <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+                    </svg>
+                </div>
+                <h3>Office Phone</h3>
+                <p>+91 82804 98167</p>
+            </div>
+
+            <div class="info-card">
+                <div class="info-icon">
+                    <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                        <circle cx="12" cy="10" r="3"></circle>
+                    </svg>
+                </div>
+                <h3>Office Location</h3>
+                <p>7th Floor, JSS STP, Infocity, Bhubaneswar, Odisha, 751024</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Get In Touch Section -->
+    <section class="get-in-touch">
+        <div class="touch-container">
+            <div class="touch-left">
+                <h2>Get In Touch with Us!</h2>
+                
+                <div class="office-info">
+                    <h3>Bhubaneswar</h3>
+                    <div class="office-details">
+                        <div class="detail-item">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+                            </svg>
+                            <span>+91 82804 98167</span>
+                        </div>
+                        <div class="detail-item">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <rect x="3" y="4" width="18" height="16" rx="2" ry="2"></rect>
+                                <polyline points="3 6 12 11 21 6"></polyline>
+                            </svg>
+                            <span>sociea.co@gmail.com</span>
+                        </div>
+                        <div class="detail-item">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                                <circle cx="12" cy="10" r="3"></circle>
+                            </svg>
+                            <span>7th Floor, JSS STP, Infocity Bhubaneswar, Odisha - 751024</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="office-info">
+                    <h3>Bangalore</h3>
+                    <div class="office-details">
+                        <div class="detail-item">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+                            </svg>
+                            <span>+91 82804 98167</span>
+                        </div>
+                        <div class="detail-item">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <rect x="3" y="4" width="18" height="16" rx="2" ry="2"></rect>
+                                <polyline points="3 6 12 11 21 6"></polyline>
+                            </svg>
+                            <span>sociea.co@gmail.com</span>
+                        </div>
+                        <div class="detail-item">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                                <circle cx="12" cy="10" r="3"></circle>
+                            </svg>
+                            <span>Bangalore - 560098</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="touch-right">
+                <form class="contact-form" id="contactForm">
+                    <div class="form-group">
+                        <label for="name">Your name</label>
+                        <input type="text" id="name" name="name" placeholder="Enter Your Name" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">Your email</label>
+                        <input type="email" id="email" name="email" placeholder="Enter Your Email" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="mobile">Mobile No</label>
+                        <input type="tel" id="mobile" name="mobile" placeholder="Enter Your Mobile Number" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="city">Your City</label>
+                        <input type="text" id="city" name="city" placeholder="Enter Your City" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="service">Select Service</label>
+                        <select id="service" name="service" required>
+                            <option value=""></option>
+                            <option value="social-media-management">Social Media Management</option>
+                            <option value="content">Content Creation & Strategy</option>
+                            <option value="digital-marketing">Digital Marketing</option>
+                            <option value="brand">Brand Identity & Design</option>
+                            <option value="seo">SEO Services</option>
+                            <option value="analytics">Analytics & Growth Tracking</option>
+                            <option value="consulting">Consulting</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="message">Your message (optional)</label>
+                        <textarea id="message" name="message" rows="5" placeholder="Enter Your Message"></textarea>
+                    </div>
+
+                    <button type="submit" class="submit-btn">Submit</button>
+                </form>
+            </div>
+        </div>
+    </section>
 
 
 </main>
 
- <footer>
-    <div class="floating-shapes">
-      <div class="shape"></div>
-      <div class="shape"></div>
-      <div class="shape"></div>
-    </div>
-    
-    <div class="footer-container">
-      <div class="footer-left">
-        <div class="logo-container">
-          <div class="logo-icon">S</div>
-          <span class="logo-text">Sociea</span>
+                                                                                                                   <!-- WhatsApp Form Popup -->
+
+
+    <div id="whatsapp-form-container" role="dialog" aria-labelledby="whatsapp-form-header" aria-hidden="true">
+        <div id="whatsapp-form-header">
+            Contact via WhatsApp
+            <button id="close-form" aria-label="Close form">&#x2715;</button>
         </div>
-        <p>Our technologies are designed to seamlessly integrate with your existing systems, minimizing disruption and maximizing productivity.</p>
-        <div class="social-icons">
-          <a href="#" class="social-icon facebook">Facebook</a>
-          <a href="#" class="social-icon twitter">X</a>
-          <a href="#" class="social-icon linkedin">LinkedIn</a>
+        <div id="whatsapp-form-body">
+            <input type="text" id="name" class="whatsapp-input" placeholder="Enter your Name" aria-label="Your name" />
+            
+            <input type="email" id="email" class="whatsapp-input" placeholder="Enter your Email" aria-label="Your email" aria-describedby="email-error" />
+            <div id="email-error" class="error-message">Please enter a valid email address</div>
+            
+            <input type="tel" id="phone" class="whatsapp-input" placeholder="Enter your Phone" aria-label="Your phone number" aria-describedby="phone-error" />
+            <div id="phone-error" class="error-message">Please enter a valid phone number</div>
+            
+            <textarea id="message" class="whatsapp-input" placeholder="Enter your Message" aria-label="Your message" aria-describedby="message-error" rows="4"></textarea>
+            <div id="message-error" class="error-message">Please enter a message</div>
+            
+            <button class="whatsapp-send-button" id="sendWhatsApp" aria-label="Send message on WhatsApp">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/>
+                </svg>
+                Send on WhatsApp
+            </button>
         </div>
-      </div>
-      
-      <div class="footer-section">
-        <h3>Useful Links</h3>
-        <ul>
-          <li><a href="#">Home</a></li>
-          <li><a href="#">Services</a></li>
-          <li><a href="#">Project</a></li>
-          <li><a href="#">Pricing</a></li>
-          <li><a href="#">Blogs</a></li>
-        </ul>
-      </div>
-      
-      <div class="footer-section">
-        <h3>Company</h3>
-        <ul>
-          <li><a href="#">Team</a></li>
-          <li><a href="#">Courses</a></li>
-          <li><a href="#">Jobs</a></li>
-          <li><a href="#">Contact</a></li>
-        </ul>
-      </div>
-      
-      <div class="footer-section footer-right">
-        <h3>Main Office</h3>
-        <address>
-          7th Floor, JSS STP,<br>
-          Infocity, Bhubaneswar, Odisha, 751024<br>
-          +916371130556<br>
-          <a href="mailto:sociea.co@gmail.com">sociea.co@gmail.com</a>
-        </address>
-      </div>
     </div>
-    
-    <div class="footer-bottom">
-      <p>Copyrights © 2025. All rights reserved by Sociea</p>
-    </div>
-  </footer> 
+
+                                                                                                                  <!-- Floating WhatsApp Button -->
+    <button id="whatsapp-button" aria-label="Open WhatsApp contact form">
+        <svg width="30" height="30" viewBox="0 0 24 24" fill="white">
+            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/>
+        </svg>
+    </button>
 
 
 
 
+                                                                                                                           <!-- Footer -->
+    <footer>
+        <div class="floating-shapes" aria-hidden="true">
+            <div class="shape"></div>
+            <div class="shape"></div>
+            <div class="shape"></div>
+        </div>
+        
+        <div class="footer-container">
+            <div class="footer-left">
+                <div class="logo-container">
+                    <div class="logo-icon" aria-hidden="true">S</div>
+                    <span class="logo-text">Sociea</span>
+                </div>
+                <p>Our technologies are designed to seamlessly integrate with your existing systems, minimizing disruption and maximizing productivity.</p>
+                <div class="social-icons">
+                    <a href="#facebook" class="social-icon" data-icon="f" aria-label="Visit our Facebook page">
+                        <span class="sr-only">Facebook</span>
+                    </a>
+                    <a href="#twitter" class="social-icon" data-icon="𝕏" aria-label="Visit our X profile">
+                        <span class="sr-only">X (Twitter)</span>
+                    </a>
+                    <a href="#linkedin" class="social-icon" data-icon="in" aria-label="Visit our LinkedIn page">
+                        <span class="sr-only">LinkedIn</span>
+                    </a>
+                </div>
+            </div>
+            
+            <div class="footer-section">
+                <h3>Useful Links</h3>
+                <nav aria-label="Useful links">
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#services">Services</a></li>
+                        <li><a href="#projects">Project</a></li>
+                        <li><a href="#pricing">Pricing</a></li>
+                        <li><a href="#blog">Blogs</a></li>
+                    </ul>
+                </nav>
+            </div>
+            
+            <div class="footer-section">
+                <h3>Company</h3>
+                <nav aria-label="Company links">
+                    <ul>
+                        <li><a href="#team">Team</a></li>
+                        <li><a href="#courses">Courses</a></li>
+                        <li><a href="#jobs">Jobs</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </nav>
+            </div>
+            
+            <div class="footer-section footer-right">
+                <h3>Main Office</h3>
+                <address>
+                    7th Floor, JSS STP,<br>
+                    Infocity, Bhubaneswar, Odisha, 751024<br>
+                    <a href="tel:+918280498167">+918280498167</a><br>
+                    <a href="mailto:sociea.co@gmail.com">sociea.co@gmail.com</a>
+                </address>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <p>Copyrights © 2025. All rights reserved by Sociea</p>
+        </div>
+    </footer>
 
-
-<!-- JS -->
-<script>
-  const whatsappBtn = document.getElementById('whatsapp-button');
-  const formContainer = document.getElementById('whatsapp-form-container');
-  const closeForm = document.getElementById('close-form');
-  const sendBtn = document.getElementById('sendWhatsApp');
-
-  whatsappBtn.addEventListener('click', () => {
-    formContainer.style.display = 'block';
-  });
-
-  closeForm.addEventListener('click', () => {
-    formContainer.style.display = 'none';
-  });
-
-  sendBtn.addEventListener('click', () => {
-    const phoneNumber = "+916371130556"; // <-- Your number here (no + sign)
-    const name = document.getElementById('name').value.trim();
-    const email = document.getElementById('email').value.trim();
-    const phone = document.getElementById('phone').value.trim();
-    const message = document.getElementById('message').value.trim();
-
-    if (!message) {
-      alert("Please enter a message.");
-      return;
-    }
-
-    const finalMessage = `Hello, my name is ${name || 'Anonymous'}.\nEmail: ${email}\nPhone: ${phone}\nMessage: ${message}`;
-    const encodedMessage = encodeURIComponent(finalMessage);
-    const whatsappURL = `https://api.whatsapp.com/send?phone=${phoneNumber}&text=${encodedMessage}`;
-
-    window.open(whatsappURL, '_blank');
-  });
-</script>
+    <script src="script.js"></script>
 </body>
 </html>
-

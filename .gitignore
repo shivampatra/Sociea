@@ -1,0 +1,16 @@
+# .gitignore
+
+# Ignore all log files
+*.log
+
+# Ignore node_modules folder
+# node_modules/
+older version/
+# # Ignore environment files
+# .env
+
+# # Ignore build folder
+# /build/
+
+# # Ignore temporary files
+# *.tmp
