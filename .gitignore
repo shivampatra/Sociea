@@ -1,4 +1,4 @@
-# .gitignore
+.gitignore
 
 # Ignore all log files
 *.log
@@ -14,3 +14,8 @@ older version/
 
 # # Ignore temporary files
 # *.tmp
+
+.gitignore
+test.html
+v2.html
+logo_bgRemoved.png
